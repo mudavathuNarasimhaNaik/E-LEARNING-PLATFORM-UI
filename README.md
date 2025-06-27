@@ -47,13 +47,10 @@ Transitions & Hover Effects – For interactive styling without JavaScript
 
 
 OUTPUT:
-
-![Image](https://github.com/user-attachments/assets/16965de9-f8f5-47cd-a7aa-f3d176d7a3a4)
-![Image](https://github.com/user-attachments/assets/a053e988-3348-486e-9a4b-177a93ed3b3f)
-![Image](https://github.com/user-attachments/assets/871e3f47-d163-4bd7-8421-52a7d0d639a2)
-![Image](https://github.com/user-attachments/assets/37972994-9c21-4a30-ba48-ee4754f3cae9)
 ![Image](https://github.com/user-attachments/assets/43de972c-d47c-4783-9761-62a37fa8c12e)
-
+![Image](https://github.com/user-attachments/assets/37972994-9c21-4a30-ba48-ee4754f3cae9)
+![Image](https://github.com/user-attachments/assets/871e3f47-d163-4bd7-8421-52a7d0d639a2)
+![Image](https://github.com/user-attachments/assets/a053e988-3348-486e-9a4b-177a93ed3b3f)
 
 ✅ Conclusion
 The E-Learning Platform UI project demonstrates a solid understanding of frontend development using only HTML and CSS. It shows that a professional, mobile-responsive, and well-structured website interface can be developed without the need for any scripting. This project is ideal for portfolios, academic submissions, or as a foundation for further development in real-world educational platforms.
