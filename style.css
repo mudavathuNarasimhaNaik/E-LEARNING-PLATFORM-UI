@@ -1,0 +1,350 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Base styles */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #dad3d3;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190617/ourmid/pngtree-blue-technology-e-commerce-learning-education-business-poster-banner-image_123753.jpg');
+  background-size: cover;
+  color: #302b2b;
+}
+header {
+  background-color: #0a2647;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    height: 50px;
+    padding: 0 20px;
+  }
+
+  .navbar h1 {
+    font-size: 1.8rem;
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+    background-color: #144272;
+}
+.hero, .about, .contact, .course-detail, .course-list {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0,86,179,0.6);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.course-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.course-card {
+  background: white;
+  padding: 1.5rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  box-shadow: 0 8px 20px rgba(0,123,255,0.3);
+  transform: translateY(-5px);
+}
+
+.course-card h3 {
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+footer {
+  position: fixed;
+  bottom: -80px; /* initially hidden */
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  transition: bottom 0.5s ease;
+  z-index: 1000;
+}
+
+footer.show {
+  bottom: 0; /* slide into view */
+}
+
+
+
+
+iframe {
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .course-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .course-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .hero, .about, .contact, .course-detail, .course-list {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Dark Mode - toggle body.dark-mode manually via JS or devtools */
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .navbar ul li a {
+  color: #eee;
+}
+
+body.dark-mode .navbar ul li a:hover {
+  color: #66aaff;
+}
+
+body.dark-mode .btn {
+  background-color: #3399ff;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(51,153,255,0.5);
+}
+
+body.dark-mode .btn:hover {
+  background-color: #007acc;
+  box-shadow: 0 6px 12px rgba(0,122,204,0.8);
+}
+
+body.dark-mode .course-card {
+  background-color: #222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+  color: #ddd;
+}
+
+body.dark-mode input, 
+body.dark-mode textarea {
+  background-color: #222;
+  color: #ddd;
+  border-color: #555;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
+
+}
+
+
+
+
+
+
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 0.5rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 180px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+---------------------------------------------------
+

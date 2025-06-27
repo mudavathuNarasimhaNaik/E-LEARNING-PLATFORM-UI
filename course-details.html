@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Details</title>
+  <link rel="stylesheet" href="course.css" />
+  
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h1>E-Learn</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="course-container">
+  <div class="course-card-detail">
+    <h2>HTML & CSS Masterclass</h2>
+    <p><strong>Instructor:</strong> John Doe</p>
+
+    <div class="progress-section">
+      <p>Course Progress</p>
+      <div class="progress-bar">
+        <div class="progress" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="video-wrapper">
+      <iframe id="video-frame" src="" allowfullscreen></iframe>
+    </div>
+
+    <div class="navigation-buttons">
+      <button onclick="prevVideo()">Previous</button>
+      <button onclick="nextVideo()">Next</button>
+    </div>
+
+    <div class="playlist">
+      <ul id="video-list"></ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 E-Learn Platform. All rights reserved.</p>
+</footer>
+
+<script>
+  const videos = [
+    { title: "Intro to HTML", url: "https://www.youtube.com/embed/UB1O30fR-EE" },
+    { title: "HTML Structure", url: "https://www.youtube.com/embed/mU6anWqZJcc" },
+    { title: "HTML Forms", url: "https://www.youtube.com/embed/1Rs2ND1ryYc" },
+    { title: "CSS Basics", url: "https://www.youtube.com/embed/kUMe1FH4CHE" },
+    { title: "Selectors and Classes", url: "https://www.youtube.com/embed/3JluqTojuME" },
+    { title: "Box Model", url: "https://www.youtube.com/embed/BsDoLVMnmZs" },
+    { title: "Flexbox", url: "https://www.youtube.com/embed/G3e-cpL7ofc" },
+    { title: "Grid Layout", url: "https://www.youtube.com/embed/qz0aGYrrlhU" },
+    { title: "Responsive Design", url: "https://www.youtube.com/embed/wRNinF7YQqQ" },
+    { title: "Final Project", url: "https://www.youtube.com/embed/HD13eq_Pmp8" }
+  ];
+
+  let currentIndex = 0;
+
+  const videoFrame = document.getElementById("video-frame");
+  const videoList = document.getElementById("video-list");
+  const progressFill = document.getElementById("progress-fill");
+
+  function loadVideo(index) {
+    videoFrame.src = videos[index].url;
+    document.querySelectorAll('#video-list li').forEach((li, i) => {
+      li.classList.toggle("active", i === index);
+    });
+    const progressPercent = ((index + 1) / videos.length) * 100;
+    progressFill.style.width = progressPercent + "%";
+  }
+
+  function prevVideo() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      loadVideo(currentIndex);
+    }
+  }
+
+  function nextVideo() {
+    if (currentIndex < videos.length - 1) {
+      currentIndex++;
+      loadVideo(currentIndex);
+    }
+  }
+
+  // Initialize playlist
+  videos.forEach((video, i) => {
+    const li = document.createElement("li");
+    li.textContent = video.title;
+    li.onclick = () => {
+      currentIndex = i;
+      loadVideo(i);
+    };
+    videoList.appendChild(li);
+  });
+
+  // Load the first video
+  loadVideo(currentIndex);
+</script>
+
+</body>
+</html>
