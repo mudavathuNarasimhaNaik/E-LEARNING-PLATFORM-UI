@@ -24,6 +24,8 @@ Typography and spacing are handled carefully using Google Fonts and standardized
 
 The purpose of the project is to demonstrate frontend web design skills using core web technologies, with no dependency on JavaScript or frameworks. It acts as a perfect base layout for any e-learning platform that could later be enhanced with backend logic or interactive scripting.
 
+The HTML5 structure is semantic, making the content well-organized and accessible. Elements like <header>, <section>, <article>, <footer>, and <form> are used appropriately, which enhances SEO compatibility and improves screen reader usability. All textual content, navigation links, course descriptions, and form inputs are logically grouped using clean and structured markup.
+
 🧰 Requirements Used
 Languages:
 
